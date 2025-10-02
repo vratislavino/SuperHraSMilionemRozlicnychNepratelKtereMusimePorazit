@@ -12,6 +12,10 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
 {
     public partial class Canvas : UserControl
     {
+        public event Action ShapesCountChanged;
+
+        public int ShapesCount => shapes.Count;
+
         List<Shape> shapes = new List<Shape>();
 
         public Canvas()
@@ -22,6 +26,7 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
         public void AddShape(Shape newShape)
         {
             shapes.Add(newShape);
+            ShapesCountChanged?.Invoke();
             Invalidate();
             newShape.OnDied += OnShapeDied;
         }
@@ -29,6 +34,7 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
         private void OnShapeDied(Shape shape)
         {
             shapes.Remove(shape);
+            ShapesCountChanged?.Invoke();
             Invalidate();
         }
 

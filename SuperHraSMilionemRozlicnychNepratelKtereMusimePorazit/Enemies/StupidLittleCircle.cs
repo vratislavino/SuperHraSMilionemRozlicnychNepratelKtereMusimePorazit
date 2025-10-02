@@ -9,10 +9,10 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.Enemies
     public class StupidLittleCircle : Shape
     {
         private Brush ColorBrush;
-
+        private static Pen outline = new Pen(Color.DarkBlue, 3f);
         public StupidLittleCircle(int x, int y) : base(x, y)
         {
-            ColorBrush = Brushes.Blue;
+            ColorBrush = Brushes.SkyBlue;
             width = 50;
             height = 50;
         }
@@ -25,6 +25,7 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.Enemies
         public override void Draw(Graphics g)
         {
             g.FillEllipse(ColorBrush, x, y, width, height);
+            g.DrawEllipse(outline, x, y, width, height);
         }
     }
 }
