@@ -34,6 +34,15 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
 
         private void Canvas_MouseDown(object sender, MouseEventArgs e)
         {
+            if (shapes.Count == 0) return;
+            foreach(var shape in shapes)
+            {
+                if(shape.IsMouseOver(e.X, e.Y))
+                {
+                    shape.DoYourThing(e.X, e.Y, e.Button == MouseButtons.Left);
+                    break;
+                }
+            }
 
         }
 
