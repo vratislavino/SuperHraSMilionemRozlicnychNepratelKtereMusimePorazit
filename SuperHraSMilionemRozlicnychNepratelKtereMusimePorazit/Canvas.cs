@@ -49,6 +49,7 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
                     break;
                 }
             }
+            Invalidate();
 
         }
 
