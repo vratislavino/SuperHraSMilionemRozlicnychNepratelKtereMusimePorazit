@@ -19,12 +19,16 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadShapeTypesFromAssembly(Assembly.GetExecutingAssembly());
+            var types = LoadShapeTypesFromAssembly(Assembly.GetExecutingAssembly());
+            shapeTypes.AddRange(types);
         }
 
         private List<Type> LoadShapeTypesFromAssembly(Assembly ass)
         {
-            // filtr pro tøídy
+            var types = ass.GetTypes().ToList();
+            types = types.Where(t => t.IsAssignableTo(typeof(Shape))).ToList();
+            types.Remove(typeof(Shape));
+            return types;
         }
 
         private void Bar1_DroppedToZero()
