@@ -22,6 +22,11 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
         {
             var types = LoadShapeTypesFromAssembly(Assembly.GetExecutingAssembly());
             shapeTypes.AddRange(types);
+
+            types = LoadShapeTypesFromAssembly(
+                Assembly.LoadFrom("VratikuvShape.dll")
+                );
+            shapeTypes.AddRange(types);
         }
 
         private List<Type> LoadShapeTypesFromAssembly(Assembly ass)
