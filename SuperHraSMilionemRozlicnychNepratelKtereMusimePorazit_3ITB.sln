@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36327.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit", "SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit\SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.csproj", "{28CFA7D8-C2B3-4965-BD2E-F70024D6ACD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{8D2299B1-9EF7-467A-A6B9-27E9B069EC51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{28CFA7D8-C2B3-4965-BD2E-F70024D6ACD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28CFA7D8-C2B3-4965-BD2E-F70024D6ACD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28CFA7D8-C2B3-4965-BD2E-F70024D6ACD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2299B1-9EF7-467A-A6B9-27E9B069EC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2299B1-9EF7-467A-A6B9-27E9B069EC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2299B1-9EF7-467A-A6B9-27E9B069EC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2299B1-9EF7-467A-A6B9-27E9B069EC51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

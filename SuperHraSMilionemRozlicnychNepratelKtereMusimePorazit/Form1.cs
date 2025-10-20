@@ -2,6 +2,7 @@ using SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit;
 using SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.Enemies;
 using System;
 using System.Reflection;
+using Shapes;
 
 namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit
 {

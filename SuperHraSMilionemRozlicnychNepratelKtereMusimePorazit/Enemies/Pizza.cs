@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shapes;
 
 namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.Enemies
 {
@@ -36,7 +37,7 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.Enemies
             angle = (angle + 360) % 360;
 
 
-            if(angle > angles[currentAngle] && angle < angles[currentAngle] + 90)
+            if(angle > currentAngle && angle < currentAngle + 90)
             {
                 return true;
             }
@@ -53,7 +54,7 @@ namespace SuperHraSMilionemRozlicnychNepratelKtereMusimePorazit.Enemies
 
         public override void Draw(Graphics g)
         {
-            g.FillPie(brush, x, y, width, height, angles[currentAngle], 90);
+            g.FillPie(brush, x, y, width, height, currentAngle, 90);
         }
     }
 }
